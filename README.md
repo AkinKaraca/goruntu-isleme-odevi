@@ -1,5 +1,11 @@
 # Görüntü işleme ödevi
 
+## Hocanın ek istediği C++ ve CUDA kurulumu
+
+`opencv_cuda_colab.ipynb` dosyası Google Colab'da OpenCV C++ kitaplığını CUDA destekli derler, GPU işlemini doğrular ve bir dizindeki görüntüleri C++ ile **1024×768** boyutunda kaydeder. Notebook kaynakları ve örnekleri içerir. Kullanım: [CPP_COLAB_KULLANIM.md](CPP_COLAB_KULLANIM.md). C++ kaynakları `cpp/` dizinindedir. Yeni defterin gerçek Colab/GPU çalıştırması henüz doğrulanmamıştır; çıktı hücreleri bu nedenle boştur. Çalıştırılmış defter ve GPU doğrulama günlüğü sonradan teslim edilmelidir.
+
+İlk beş görev aşağıdaki Python uygulamasındadır. Önceki Numba CUDA uygulaması ile yeni OpenCV CUDA kurulumu farklıdır. Hocanın paylaştığı metinde C++ şartı dizinden okuma ve boyutlandırma maddesinde yer almaktadır; ilk beş işlemin C++ olması ayrıca isteniyorsa bu dosyalar o şartı karşılamaz.
+
 Kodlar istek doğrultusunda yorum satırı içermez. Python 3.12 önerilir. OpenCV görüntü okuma/yazma, istenen hazır CLAHE ve medyan işlemleri, örnek üretimi ve karşılaştırma için kullanılır. Elle yazılan algoritmalarda hazır histogram, CDF, normalizasyon, eşitleme veya filtre fonksiyonu çağrılmaz. NumPy dizileri bellek ve veri tipleri için, Numba açık döngüleri derlemek için kullanılır. Test dosyasındaki hazır fonksiyonlar yalnızca doğrulama içindir.
 
 ## Çalıştırma

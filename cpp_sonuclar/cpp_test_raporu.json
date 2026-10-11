@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "cuda_tested": false,
+  "images_per_mode": 7,
+  "dimensions": [
+    1024,
+    768
+  ],
+  "commands": [
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\serial"
+      ],
+      "exit_code": 0,
+      "stdout": "alpha.png : 53x27 -> 1024x768 : alpha.png.png\nayni.jpg : 20x30 -> 1024x768 : ayni.jpg.png\nayni.png : 30x20 -> 1024x768 : ayni.png.png\nbuyuk.PNG : 1400x900 -> 1024x768 : buyuk.PNG.png\nderin.png : 101x91 -> 1024x768 : derin.png.png\ngri.png : 83x59 -> 1024x768 : gri.png.png\nrenk.png : 217x123 -> 1024x768 : renk.png.png\nTAMAM: 7 ATLANDI: 1 HATA: 0\n",
+      "stderr": "ATLANDI: bozuk.png\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\parallel",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "stdout": "ayni.png : 30x20 -> 1024x768 : ayni.png.png\nayni.jpg : 20x30 -> 1024x768 : ayni.jpg.png\ngri.png : 83x59 -> 1024x768 : gri.png.png\nbuyuk.PNG : 1400x900 -> 1024x768 : buyuk.PNG.png\nderin.png : 101x91 -> 1024x768 : derin.png.png\nalpha.png : 53x27 -> 1024x768 : alpha.png.png\nrenk.png : 217x123 -> 1024x768 : renk.png.png\nTAMAM: 7 ATLANDI: 1 HATA: 0\n",
+      "stderr": "ATLANDI: bozuk.png\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\serial"
+      ],
+      "exit_code": 3,
+      "stdout": "TAMAM: 0 ATLANDI: 1 HATA: 7\n",
+      "stderr": "HATA: alpha.png : Cikti zaten var; farkli dizin secin\nHATA: ayni.jpg : Cikti zaten var; farkli dizin secin\nHATA: ayni.png : Cikti zaten var; farkli dizin secin\nATLANDI: bozuk.png\nHATA: buyuk.PNG : Cikti zaten var; farkli dizin secin\nHATA: derin.png : Cikti zaten var; farkli dizin secin\nHATA: gri.png : Cikti zaten var; farkli dizin secin\nHATA: renk.png : Cikti zaten var; farkli dizin secin\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "HATA: Girdi ve cikti dizinleri farkli olmali\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\olmayan",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\yeni"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "HATA: Girdi dizini bulunamadi\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\bad_threads",
+        "--threads",
+        "0"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "HATA: Is parcacigi sayisi 1..64 olmali\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\bos",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\bos_cikti"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "HATA: Dizinde desteklenen goruntu dosyasi yok\n"
+    },
+    {
+      "args": [
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\girdiler",
+        "WORKSPACE\\work\\cpp-tests\\cpp_test_kimpjlym\\cuda_yok",
+        "--cuda"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "HATA: Program CUDA destegiyle derlenmemis\n"
+    }
+  ]
+}
