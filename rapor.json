@@ -1,0 +1,20 @@
+{
+  "backend": "parallel",
+  "threads": 8,
+  "minimum": 102,
+  "maximum": 136,
+  "opencv": "4.14.0",
+  "timings_ms": {
+    "01_dogrusal": 0.563,
+    "02_histogram_esitleme": 0.76,
+    "03_clahe_el": 0.512,
+    "03_clahe_opencv": 0.241,
+    "04_ortalama_3x3": 0.369,
+    "05_medyan_el_5x5": 9.184,
+    "05_medyan_opencv_5x5": 0.752
+  },
+  "clahe_max_difference": 0,
+  "clahe_mean_difference": 0.0,
+  "median_max_difference": 0,
+  "median_mean_difference": 0.0
+}

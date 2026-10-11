@@ -1,0 +1,10 @@
+numpy==2.5.4
+opencv-python==4.14.0.94
+numba==0.68.0
+llvmlite==0.50.0
+numba-cuda==0.30.4
+cuda-bindings==13.4.3
+cuda-core==1.2.1
+cuda-pathfinder==1.8.3
+nvidia-cuda-runtime-cu12==12.9.79
+packaging==26.3
